@@ -68,6 +68,8 @@ services:
       - "local.env"
     environment:
       NAUTOBOT_DB_ENGINE: "django.db.backends.postgres"
+    ports:
+      - "5432:5432"
     volumes:
       - "db_data:/var/lib/postgresql/data"
     restart: "unless-stopped"
